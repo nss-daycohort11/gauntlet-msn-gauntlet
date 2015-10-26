@@ -34,6 +34,8 @@ var Warrior = function() {
 };
 Warrior.prototype = new Fighter();
 
+var testWarrior = new Warrior();
+
 
 var Valkyrie = function() {
   this.name = "Valkyrie";
