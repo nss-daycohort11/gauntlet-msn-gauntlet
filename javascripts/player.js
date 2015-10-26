@@ -38,20 +38,20 @@ Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
 }
 
-Player.prototype.generateClass = function() {
-  // Get a random index from the allowed classes array
-  var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
+// Player.prototype.generateClass = function() {
+//   // Get a random index from the allowed classes array
+//   var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 
-  // Get the string at the index
-  var randomClass = this.allowedClasses[random];
+//   // Get the string at the index
+//   var randomClass = this.allowedClasses[random];
 
-  // Composes the corresponding player class into the player object
-  this.class = new window[randomClass]();
+//   // Composes the corresponding player class into the player object
+//   this.class = new window[randomClass]();
 
-  // Add the health bonus
-  this.health += this.class.healthBonus;
-  return this.class;
-};
+//   // Add the health bonus
+//   this.health += this.class.healthBonus;
+//   return this.class;
+// };
 
 /*
   Define the base properties for a human in a 
