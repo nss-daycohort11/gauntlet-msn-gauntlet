@@ -3,20 +3,20 @@ $(document).ready(function() {
   /*
     Test code to generate a human player and an orc player
    */
-  var warrior = new Human();
-  warrior.setWeapon(new WarAxe());
+  var warrior = new Princess();
+  warrior.setWeapon(new Fish());
   warrior.generateClass();  // This will be used for "Surprise me" option
   console.log(warrior.toString());
 
-  var orc = new Orc();
+  var orc = new Fighter();
   orc.generateClass();
-  orc.setWeapon(new BroadSword());
+  orc.setWeapon(new Hair());
   console.log(orc.toString());
 
   /*
     Test code to generate a spell
    */
-  var spell = new Sphere();
+  var spell = new Magic();
   console.log("spell: ", spell.toString());
 
 
@@ -58,5 +58,24 @@ $(document).ready(function() {
     $(".card").hide();
     $("." + previousCard).show();
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });

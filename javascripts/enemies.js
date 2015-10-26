@@ -1,7 +1,7 @@
-var Orc = function() {
+var Fighter = function() {
   this.health = this.health + 20;
   this.species = "Orc";
-  this.allowedClasses = ["Warrior", "Berserker", "Shaman"];
+  this.allowedClasses = ["Pocahontas", "Tiana", "Jasmine"];
 
   this.generateClass = function() {
     // Get a random index from the allowed classes array
@@ -9,12 +9,10 @@ var Orc = function() {
 
     // Get the string at the index
     var randomClass = this.allowedClasses[random];
-
     // Composes the corresponding player class into the player object
     this.class = new window[randomClass]();
     return this.class;
   }
 };
-
-Orc.prototype = new Monster();
+Fighter.prototype = new EnemyPrincess();
 

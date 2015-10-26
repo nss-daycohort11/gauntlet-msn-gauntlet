@@ -8,24 +8,38 @@ var Weapon = function() {
   }
 };
 
-var Dagger = function() {
-  this.name = "dagger";
+var Fish = function() {
+  this.name = "fish";
   this.damage = 4;
-  this.hands = 1;
+  this.hands = 2;
 };
-Dagger.prototype = new Weapon();
+Fish.prototype = new Weapon();
 
-var BroadSword = function() {
-  this.name = "broad sword";
+var Hair = function() {
+  this.name = "hair";
   this.damage = 14;
   this.hands = 2;
 };
-BroadSword.prototype = new Weapon();
+Hair.prototype = new Weapon();
 
-var WarAxe = function() {
-  this.name = "war axe";
+var Books = function() {
+  this.name = "books";
   this.damage = 18;
   this.hands = 2;
 };
-WarAxe.prototype = new Weapon();
+Books.prototype = new Weapon();
+
+var Tiger = function() {
+  this.name = "tiger";
+  this.damage = 18;
+  this.hands = 2;
+};
+Tiger.prototype = new Weapon();
+
+var BowArrow = function() {
+  this.name = "bow and arrow";
+  this.damage = 18;
+  this.hands = 2;
+};
+BowArrow.prototype = new Weapon();
 
