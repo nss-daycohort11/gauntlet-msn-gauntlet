@@ -2,121 +2,123 @@
   Base function for a player, or enemy, class (profession)
  */
 var PlayerClass = function() {
-  this.name = "Beggar";
+  this.name = "Princess";
   this.healthBonus = 0;
   this.strengthBonus = 0;
   this.intelligenceBonus = 0;
-  this.magical = false;
+  this.magical = true;
 
   this.toString = function() {
     return this.name;
   }
 };
-
+PlayerClass.prototype = new Princess();
 /*
-    FIGHTER CLASSES
-      - Warrior
-      - Valkyrie
-      - Berserker
-      - Monk
+    CLASSIC PRINCESSES
+      - Pocahontas
+      - Jasmine
+      - Belle
+      - Ariel
  */
-var Fighter = function() {
+var ClassicPrincesses = function() {
   this.healthBonus = 20;
   this.strengthBonus = 10;
 };
-Fighter.prototype = new PlayerClass();
+ClassicPrincesses.prototype = new PlayerClass();
 
 
-var Warrior = function() {
-  this.name = "Warrior";
+var Pocahontas = function() {
+  this.name = "Pocahontas";
   this.healthBonus = this.healthBonus + 25;
   this.strengthBonus = this.strengthBonus + 30;
+  this.health = this.health + this.healthBonus;
 };
-Warrior.prototype = new Fighter();
+Pocahontas.prototype = new ClassicPrincesses();
 
 var testWarrior = new Warrior();
 
 
-var Valkyrie = function() {
-  this.name = "Valkyrie";
+var Jasmine = function() {
+  this.name = "Jasmine";
   this.healthBonus = this.healthBonus + 20;
   this.strengthBonus = this.strengthBonus + 10;
+  this.health = this.health + this.healthBonus;
 };
-Valkyrie.prototype = new Fighter();
+Jasmine.prototype = new ClassicPrincesses();
 
 
-var Berserker = function() {
-  this.name = "Berserker";
+var Belle = function() {
+  this.name = "Belle";
   this.healthBonus = this.healthBonus + 35;
   this.strengthBonus = this.strengthBonus + 20;
+  this.health = this.health + this.healthBonus;
 };
-Berserker.prototype = new Fighter();
+Belle.prototype = new ClassicPrincesses();
 
 
-var Monk = function() {
-  this.name = "Monk";
+var Ariel = function() {
+  this.name = "Ariel";
   this.healthBonus = this.healthBonus + 10;
   this.strengthBonus = this.strengthBonus + 40;
+  this.health = this.health + this.healthBonus;
 };
-Monk.prototype = new Fighter();
+Ariel.prototype = new ClassicPrincesses();
 
 
 /*
-    MAGICAL CLASSES
-      - Shaman
-      - Wizard
-      - Conujurer
-      - Sorcerer
+    NEW PRINCESSES
+      - Elsa
+      - Tiana
+      - Rapunzel
+      - Merida
  */
-var Mage = function() {
-  this.name = "Mage";
+var NewPrincesses = function() {
+  this.name = "New Princess";
   this.magical = true;
   this.healthBonus = this.healthBonus - 10;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.health = this.health + this.healthBonus;
 };
-Mage.prototype = new PlayerClass();
+NewPrincesses.prototype = new PlayerClass();
 
 
-var Shaman = function() {
-  this.name = "Shaman";
+var Elsa = function() {
+  this.name = "Elsa";
   this.healthBonus = this.healthBonus + 5;
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 20;
+  this.health = this.health + this.healthBonus;
 };
-Shaman.prototype = new Mage();
+Elsa.prototype = new NewPrincesses();
 
 
-var Wizard = function() {
-  this.name = "Wizard";
+var Tiana = function() {
+  this.name = "Tiana";
   this.healthBonus = this.healthBonus - 15;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
+  this.health = this.health + this.healthBonus;
 };
-Wizard.prototype = new Mage();
+Tiana.prototype = new NewPrincesses();
 
 
-var Conjurer = function() {
-  this.name = "Conjurer";
+var Rapunzel = function() {
+  this.name = "Rapunzel";
   this.strengthBonus = this.strengthBonus - 10;
   this.intelligenceBonus = this.intelligenceBonus + 10;
+  this.health = this.health + this.healthBonus;
 };
-Conjurer.prototype = new Mage();
+Rapunzel.prototype = new NewPrincesses();
 
 
-var Sorcerer = function() {
-  this.name = "Sorcerer";
+var Merida = function() {
+  this.name = "Merida";
   this.healthBonus = this.healthBonus - 5;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 30;
+  this.health = this.health + this.healthBonus;
 };
-Sorcerer.prototype = new Mage();
+Merida.prototype = new NewPrincesses();
 
-
-/*
-    STEALTH CLASSES
-      - Thief
-      - Ninja
-      - Assassin
- */
 
