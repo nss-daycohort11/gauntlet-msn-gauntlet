@@ -10,35 +10,35 @@ var Weapon = function() {
 
 var Fish = function() {
   this.name = "fish";
-  this.damage = 4;
+  this.damage = 15;
   this.hands = 2;
 };
 Fish.prototype = new Weapon();
 
 var Hair = function() {
   this.name = "hair";
-  this.damage = 14;
+  this.damage = 23;
   this.hands = 2;
 };
 Hair.prototype = new Weapon();
 
 var Books = function() {
   this.name = "books";
-  this.damage = 18;
+  this.damage = 28;
   this.hands = 2;
 };
 Books.prototype = new Weapon();
 
 var Tiger = function() {
   this.name = "tiger";
-  this.damage = 18;
+  this.damage = 35;
   this.hands = 2;
 };
 Tiger.prototype = new Weapon();
 
 var BowArrow = function() {
   this.name = "bow and arrow";
-  this.damage = 18;
+  this.damage = 31;
   this.hands = 2;
 };
 BowArrow.prototype = new Weapon();

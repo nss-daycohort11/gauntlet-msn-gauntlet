@@ -148,6 +148,14 @@ var Player2 = {};
     console.log("player2 damage", Player2.weapon.damage);
     Player1.health = Player1.health - Player2.weapon.damage;
     Player2.class.health = Player2.class.health - Player1.weapon.damage;
+    if (Player1.health <= 0) {
+      alert("The Evil Princess Won.");
+      $("#battleground").hide();
+    }
+    if (Player2.class.health <= 0) {
+      alert("You Win!!!");
+      $("#battleground").hide();
+    }
   });
 
 
