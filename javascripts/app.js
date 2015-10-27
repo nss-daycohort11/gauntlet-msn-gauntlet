@@ -187,7 +187,7 @@ var Player2 = {};
     }
     $("#health1").val(Player1.health);
     $("#health2").val(Player2.class.health);
-    $("#to-string").html(Player1.toString());
+    $("#to-string").append("<div class='btm_margin'>" + Player1.toString() + "</div>");
     console.log("player 1 to string", Player1);
     console.log("player1 health", Player1.health);
     console.log("player1 damage", Player1.weapon.damage);
@@ -199,6 +199,7 @@ var Player2 = {};
   $("#magic-button").click(function() {
     $(this).hide();
     var magic = new Magic();
+    $("#to-string").append("<div class='btm_margin'>" + magic.toString() + "</div>");
     Player2.class.health = Player2.class.health - magic.damage;
     if (Player2.class.health <= 0) {
       alert("You Win!!!");

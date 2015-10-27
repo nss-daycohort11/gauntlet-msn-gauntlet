@@ -31,6 +31,9 @@ body {
 /*
   Section styles
  */
+.btm_margin {
+  margin-bottom: 20px;
+}
 .card { 
   display: none;
 }
