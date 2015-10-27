@@ -24,3 +24,16 @@ var Magic = function() {
   this.type = this.damageTypes[random];
 };
 Magic.prototype = new Spell();
+
+var BadMagic = function() {
+  this.name = "Bad Magic";
+  this.damage = Math.floor(Math.random() * 10 - 20);
+
+  var random = Math.round(Math.random() * (this.damageTypes.length - 1));
+  this.type = this.damageTypes[random];
+};
+BadMagic.prototype = new Spell();
+
+Player.prototype.setSpell = function(newSpell) {
+  this.spell = newSpell;
+};

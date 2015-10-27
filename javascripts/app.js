@@ -16,8 +16,8 @@ $(document).ready(function() {
   /*
     Test code to generate a spell
    */
-  var spell = new Magic();
-  console.log("spell: ", spell.toString());
+  // var spell = new Magic();
+  // console.log("spell: ", spell.toString());
 
 
   /*
@@ -25,7 +25,9 @@ $(document).ready(function() {
 
     Show the initial view that accepts player name
    */
+  $("#battleground").hide();
   $("#player-setup").show();
+
 
   /*
     When any button with card__link class is clicked,
@@ -59,7 +61,7 @@ $(document).ready(function() {
     $("." + previousCard).show();
   });
 
-//***********************ADD PLAYER CLICKS*********************
+//***********************SELECT PRINCESS*********************
 var Player1 = {};
 
   $(".pocahontas").click(function(e) {
@@ -121,7 +123,7 @@ var Player1 = {};
     console.log(Player1);
   });
 
-//*****************LETS FIGHT****************
+//*****************LETS FIGHT GENERATES OPPONENT ****************
 var Player2 = {};
   $(".battle").click(function() {
     Player2 = new Fighter();
@@ -138,24 +140,55 @@ var Player2 = {};
     if (Player2.class.name === "Jasmine") {
       Player2.weapon = new Tiger();
     }
+    $("#player-setup").hide();
+    $("class-select").hide();
+    $("#weapon-select").hide();
+    $("#battleground").show();
     console.log(Player2);
+    console.log("Initial player1 health", Player1.health);
+    console.log("Initial player1 damage", Player1.weapon.damage);
+    console.log("Initial player2 health", Player2.class.health);
+    console.log("Initial player2 damage", Player2.weapon.damage);
+    $("#health1").val(Player1.health);
+    $("#health2").val(Player2.class.health);
   });
+//************************ATTACK BUTTON**************************
 
   $(".attack").click(function() {
-    console.log("player1 health", Player1.health);
-    console.log("player1 damage", Player1.weapon.damage);
-    console.log("player2 health", Player2.class.health);
-    console.log("player2 damage", Player2.weapon.damage);
     Player1.health = Player1.health - Player2.weapon.damage;
     Player2.class.health = Player2.class.health - Player1.weapon.damage;
     if (Player1.health <= 0) {
       alert("The Evil Princess Won.");
       $("#battleground").hide();
+      $("#player-setup").show();
     }
     if (Player2.class.health <= 0) {
       alert("You Win!!!");
       $("#battleground").hide();
+      $("#player-setup").show();
     }
+    $("#health1").val(Player1.health);
+    $("#health2").val(Player2.class.health);
+    console.log("player1 health", Player1.health);
+    console.log("player1 damage", Player1.weapon.damage);
+    console.log("player2 health", Player2.class.health);
+    console.log("player2 damage", Player2.weapon.damage);
+  });
+//*****************USE MAGIC BUTTON***********************
+
+  $("#magic-button").click(function() {
+    $(this).hide();
+    var magic = new Magic();
+    Player2.class.health = Player2.class.health - magic.damage;
+    if (Player2.class.health <= 0) {
+      alert("You Win!!!");
+      $("#battleground").hide();
+      $("#player-setup").show();
+    }
+    $("#health1").val(Player1.health);
+    $("#health2").val(Player2.class.health);
+    console.log(magic.damage);
+    console.log("player2 health", Player2.class.health);
   });
 
 
