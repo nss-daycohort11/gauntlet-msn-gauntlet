@@ -12,6 +12,7 @@ var PlayerClass = function() {
   //   return this.name;
   // }
 };
+
 PlayerClass.prototype = new Princess();
 /*
     CLASSIC PRINCESSES

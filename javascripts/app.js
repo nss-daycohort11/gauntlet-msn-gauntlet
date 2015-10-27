@@ -137,6 +137,7 @@ var Player1 = {};
 //*****************LETS FIGHT GENERATES OPPONENT ****************
 var Player2 = {};
   $(".battle").click(function() {
+
     Player2 = new Fighter();
     Player2.generateClass();
     // Player2.weapon = new Tiger();
@@ -184,6 +185,7 @@ var Player2 = {};
       alert("You Win!!!");
       $("#battleground").hide();
       $("#player-setup").show();
+
     }
     $("#health1").val(Player1.health);
     $("#health2").val(Player2.class.health);
@@ -203,6 +205,7 @@ var Player2 = {};
     Player2.class.health = Player2.class.health - magic.damage;
     if (Player2.class.health <= 0) {
       alert("You Win!!!");
+      stop();
       $("#battleground").hide();
       $("#player-setup").show();
     }

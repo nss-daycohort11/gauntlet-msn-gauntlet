@@ -1,3 +1,5 @@
+
+
 /*
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
