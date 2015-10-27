@@ -124,6 +124,7 @@ var Player1 = {};
 //*****************LETS FIGHT****************
 var Player2 = {};
   $(".battle").click(function() {
+
     Player2 = new Fighter();
     Player2.generateClass();
     // Player2.weapon = new Tiger();
@@ -139,7 +140,11 @@ var Player2 = {};
       Player2.weapon = new Tiger();
     }
     console.log(Player2);
+
+    
+
   });
+
 
   $(".attack").click(function() {
     console.log("player1 health", Player1.health);
@@ -151,9 +156,11 @@ var Player2 = {};
     if (Player1.health <= 0) {
       alert("The Evil Princess Won.");
       $("#battleground").hide();
+      stop();
     }
     if (Player2.class.health <= 0) {
       alert("You Win!!!");
+      stop();
       $("#battleground").hide();
     }
   });

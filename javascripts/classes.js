@@ -12,6 +12,7 @@ var PlayerClass = function() {
     return this.name;
   }
 };
+
 PlayerClass.prototype = new Princess();
 /*
     CLASSIC PRINCESSES
@@ -34,8 +35,6 @@ var Pocahontas = function() {
   this.health = this.health + this.healthBonus;
 };
 Pocahontas.prototype = new ClassicPrincesses();
-
-var testWarrior = new Warrior();
 
 
 var Jasmine = function() {
