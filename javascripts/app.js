@@ -176,20 +176,21 @@ var Player2 = {};
   $(".attack").click(function() {
     Player1.health = Player1.health - Player2.weapon.damage;
     Player2.class.health = Player2.class.health - Player1.weapon.damage;
+    $("#health1").val(Player1.health);
+    $("#health2").val(Player2.class.health);
+    $("#to-string").append("<div class='btm_margin'>" + Player1.toString() + "</div>");
     if (Player1.health <= 0) {
       alert("The Evil Princess Won.");
       $("#battleground").hide();
       $("#player-setup").show();
+      $("#to-string").empty();
     }
     if (Player2.class.health <= 0) {
       alert("You Win!!!");
       $("#battleground").hide();
       $("#player-setup").show();
-
+      $("#to-string").empty();
     }
-    $("#health1").val(Player1.health);
-    $("#health2").val(Player2.class.health);
-    $("#to-string").append("<div class='btm_margin'>" + Player1.toString() + "</div>");
     console.log("player 1 to string", Player1);
     console.log("player1 health", Player1.health);
     console.log("player1 damage", Player1.weapon.damage);
@@ -208,6 +209,7 @@ var Player2 = {};
       stop();
       $("#battleground").hide();
       $("#player-setup").show();
+      $("#to-string").empty();
     }
     $("#health1").val(Player1.health);
     $("#health2").val(Player2.class.health);
