@@ -8,9 +8,9 @@ var PlayerClass = function() {
   this.intelligenceBonus = 0;
   this.magical = true;
 
-  this.toString = function() {
-    return this.name;
-  }
+  // this.toString = function() {
+  //   return this.name;
+  // }
 };
 PlayerClass.prototype = new Princess();
 /*
@@ -73,7 +73,7 @@ Ariel.prototype = new ClassicPrincesses();
 var NewPrincesses = function() {
   this.name = "New Princess";
   this.magical = true;
-  this.healthBonus = this.healthBonus - 10;
+  this.healthBonus = this.healthBonus - 0;
   this.strengthBonus = this.strengthBonus - 20;
   this.intelligenceBonus = this.intelligenceBonus + 20;
   this.health = this.health + this.healthBonus;
@@ -93,7 +93,7 @@ Elsa.prototype = new NewPrincesses();
 
 var Tiana = function() {
   this.name = "Tiana";
-  this.healthBonus = this.healthBonus - 15;
+  this.healthBonus = this.healthBonus - 8;
   this.strengthBonus = this.strengthBonus - 25;
   this.intelligenceBonus = this.intelligenceBonus + 40;
   this.health = this.health + this.healthBonus;
@@ -103,7 +103,7 @@ Tiana.prototype = new NewPrincesses();
 
 var Rapunzel = function() {
   this.name = "Rapunzel";
-  this.strengthBonus = this.strengthBonus - 10;
+  this.strengthBonus = this.strengthBonus - 2;
   this.intelligenceBonus = this.intelligenceBonus + 10;
   this.health = this.health + this.healthBonus;
 };

@@ -16,20 +16,7 @@ var Player = function(name) {
   this.intelligence = 90;
 
   this.toString = function() {
-    var output = [this.playerName,
-      ": a ",
-      this.skinColor,
-      " skinned ",
-      this.species,
-      " ",
-      this.class,
-      " with ",
-      this.health,
-      " health. ",
-      (this.class.magical) ? "Able to cast " : " Wielding a ",
-      this.weapon.toString(),
-      "!"
-    ].join("");
+    var output = this.name + " attacks with a " + this.weapon.toString() + " for " + this.weapon.damage + " points of damage.";
     return output;
   };
 };

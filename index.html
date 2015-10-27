@@ -194,14 +194,16 @@
             </a>
           </div>
         </div>
-      <div class="card__button">
-        <a class="card__link btn btn--big btn--orange" 
-           href="#" 
-           next="card--battleground">
-          <span class="btn__prompt">></span>
-          <span class="btn__text battle">Let the bitches fight!</span>
-        </a>
-      </div>
+      </section>
+      <section id="fight">
+        <div class="card__button">
+          <a class="card__link btn btn--big btn--orange" 
+             href="#" 
+             next="card--battleground">
+            <span class="btn__prompt">></span>
+            <span class="btn__text battle">Let the bitches fight!</span>
+          </a>
+        </div>
     </section>
 
     <section id="battleground" class="card--battleground">
@@ -214,13 +216,20 @@
         </a>
         <button id="magic-button">Use Magic</button>
       </div>
-      <div id="player1">
-        <label>Princess:</label>
-        <input id="health1" type="text">
-      </div>
-      <div id="player2">
-        <label>Evil Princess:</label>
-        <input id="health2" type="text">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3" id="player1">
+            <div id="player1-name"></div>
+            <input id="health1" type="text">
+          </div>
+          <div class="col-sm-6">
+            <div id="to-string"></div>
+          </div>
+          <div class="col-sm-3" id="player2">
+            <div id="player2-name"></div>
+            <input id="health2" type="text">
+          </div>
+        </div>
       </div>
     </section>
   </article>

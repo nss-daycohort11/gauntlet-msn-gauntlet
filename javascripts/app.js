@@ -25,6 +25,7 @@ $(document).ready(function() {
 
     Show the initial view that accepts player name
    */
+  $("#fight").hide();
   $("#battleground").hide();
   $("#player-setup").show();
 
@@ -100,26 +101,36 @@ var Player1 = {};
 //******************SELECT WEAPONS*******************
   $(".fish").click(function() {
     Player1.weapon = new Fish();
+    $("#weapon-select").hide();
+    $("#fight").show();
     console.log(Player1);
   });
 
   $(".hair").click(function() {
     Player1.weapon = new Hair();
+    $("#weapon-select").hide();
+    $("#fight").show();
     console.log(Player1);
   });
 
   $(".books").click(function() {
     Player1.weapon = new Books();
+    $("#weapon-select").hide();
+    $("#fight").show();
     console.log(Player1);
   });
 
   $(".tiger").click(function() {
     Player1.weapon = new Tiger();
+    $("#weapon-select").hide();
+    $("#fight").show();
     console.log(Player1);
   });
 
   $(".bowarrow").click(function() {
     Player1.weapon = new BowArrow();
+    $("#weapon-select").hide();
+    $("#fight").show();
     console.log(Player1);
   });
 
@@ -140,15 +151,22 @@ var Player2 = {};
     if (Player2.class.name === "Jasmine") {
       Player2.weapon = new Tiger();
     }
+    $("#fight").hide();
     $("#player-setup").hide();
     $("class-select").hide();
     $("#weapon-select").hide();
     $("#battleground").show();
+    $("#magic-button").show();
+
     console.log(Player2);
     console.log("Initial player1 health", Player1.health);
     console.log("Initial player1 damage", Player1.weapon.damage);
     console.log("Initial player2 health", Player2.class.health);
     console.log("Initial player2 damage", Player2.weapon.damage);
+    console.log("player 1 name", Player1.name);
+//*****************SEND NAMES OF PRINCESSES TO DIVS*****************
+    $("#player1-name").html(Player1.name + ":");
+    $("#player2-name").html("Evil " + Player2.class.name + ":");
     $("#health1").val(Player1.health);
     $("#health2").val(Player2.class.health);
   });
@@ -169,6 +187,8 @@ var Player2 = {};
     }
     $("#health1").val(Player1.health);
     $("#health2").val(Player2.class.health);
+    $("#to-string").html(Player1.toString());
+    console.log("player 1 to string", Player1);
     console.log("player1 health", Player1.health);
     console.log("player1 damage", Player1.weapon.damage);
     console.log("player2 health", Player2.class.health);

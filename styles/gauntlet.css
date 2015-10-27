@@ -48,12 +48,17 @@ body {
   text-align: center;
 }
 
+#fight {
+  margin-top: 325px;
+}
+
 
 /*
   Button styles
  */
 
 .btn {
+  font-family: cursive;
   text-decoration: none;
   background-color: white;
   color: #888;

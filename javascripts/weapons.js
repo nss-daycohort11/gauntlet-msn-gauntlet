@@ -9,21 +9,21 @@ var Weapon = function() {
 };
 
 var Fish = function() {
-  this.name = "fish";
+  this.name = "fish slap";
   this.damage = 15;
   this.hands = 2;
 };
 Fish.prototype = new Weapon();
 
 var Hair = function() {
-  this.name = "hair";
+  this.name = "hair pull";
   this.damage = 23;
   this.hands = 2;
 };
 Hair.prototype = new Weapon();
 
 var Books = function() {
-  this.name = "books";
+  this.name = "book throw";
   this.damage = 28;
   this.hands = 2;
 };
